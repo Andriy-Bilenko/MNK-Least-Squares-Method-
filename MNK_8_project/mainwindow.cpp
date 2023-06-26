@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("welcome");
     //for red exit button:
     QPalette Pal(palette());
     Pal.setColor(QPalette::Button, QColor(53,0,0));
@@ -90,12 +91,18 @@ void MainWindow::translateFunction()
         }
         qApp->installTranslator(m_translator);
         qApp->installTranslator(m_systemTranslator);
-        ui->helpButton->setText("ДОПОМОГА");//current widget button texts don't load for some reason
+        ui->mnkButton->setText("МНК");//current widget texts don't load for some reason
+        ui->skvButton->setText("СКВ");
+        ui->helpButton->setText("ДОПОМОГА");
         ui->exitButton->setText("ВИЙТИ");
+        this->setWindowTitle("вітаємо");
     }else{
         qApp->removeTranslator(m_translator);
         qApp->removeTranslator(m_systemTranslator);
+        ui->mnkButton->setText("MNK");
+        ui->skvButton->setText("SKV");
         ui->helpButton->setText("HELP");
         ui->exitButton->setText("EXIT");
+        this->setWindowTitle("welcome");
     }
 }

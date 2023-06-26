@@ -11,6 +11,8 @@
 #include <QResizeEvent>
 #include <QPalette>
 #include <QTranslator>
+#include "exceptions.hpp"
+#include "helpingFunctions.hpp"
 
 SkvWindow::SkvWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -143,17 +145,18 @@ int SkvWindow::read(std::vector<double> &input, double& confidence_interval)
 {
     input.clear();
     QString qtext = ui->textEdit->toPlainText();
-    std::string text = qtext.toStdString();
-    std::replace(text.begin(), text.end(), ',', '.');//replacing commas with dots if such available
-    std::stringstream ss(text);
-    std::string tmp{""};
-    while(ss >> tmp){
+    QTextStream ts (&qtext);
+    QString tmp {""};
+    while(!ts.atEnd()){
         try{
-            input.push_back(std::stod(tmp));
-        }catch(...){//catching std::stod errors and other
-            QString errormessage = tr("error reading floating point numbers from the box, please make sure input data is clean.");
-            QMessageBox::critical(this, tr("ERROR"), errormessage);
-            return -1;
+            ts >> tmp;
+            if(tmp.toStdString().find_first_not_of(' ') != std::string::npos)
+            {//not empty (not only spaces)
+                input.push_back(getNumberFromQString(tmp));
+            }
+        }catch(const std::exception& ex){
+            QMessageBox::critical(this, tr("ERROR"), tr(ex.what()));
+            return -1;//end of function execution
         }
     }
     //getting confidence interval number from combobox:

@@ -11,7 +11,7 @@
     <message>
         <location filename="helpdialog.ui" line="66"/>
         <source>MNK:</source>
-        <translation>MNK:</translation>
+        <translation>МНК:</translation>
     </message>
     <message>
         <location filename="helpdialog.ui" line="83"/>
@@ -22,11 +22,11 @@
     <message>
         <location filename="helpdialog.ui" line="95"/>
         <source>MNK is a data visualization program, that takes in data points, linearizes them and outputs the &quot;equation&quot; of the linear fit (line&apos;s equation is: y = slope * x + intercept).</source>
-        <translation>MNK це програма візуалізації даних, яка приймає на вхід точкові дані (що мають іксову та ігрикову складову), лінеаризує їх та видає &quot;рівняння&quot; апроксимації (рівняння прямої: y = slope * x + intercept).</translation>
+        <translation>MНK - це програма візуалізації даних, яка приймає на вхід іксову та ігрекову координати експериментальних точок, лінеаризує цю залежність та видає &quot;рівняння&quot; апроксимації (рівняння прямої: y = slope * x + intercept).</translation>
     </message>
     <message>
         <location filename="helpdialog.ui" line="107"/>
-        <source>Works using Least Squares Method (that&apos;s where its title came from).</source>
+        <source>Works using Least Squares Method (MNK in Ukrainian, that&apos;s where its title came from).</source>
         <translation>Працює за Методом Найменших Квадратів (звідси і пішла назва).</translation>
     </message>
     <message>
@@ -39,8 +39,8 @@
         <location filename="helpdialog.ui" line="133"/>
         <source>input data points (x values in X column, y values - y column)(specifying names and units of X and Y variables is not mandatory). Also specify error values for each of them (either no errors, fixed errors (will then need to specify them in the fields below) or error for every point individulally) and press &quot;FIT&quot; button to see the linearization.
 You can open existing csv files or save newly created (Just see the menubar on the upper left) and also you can take a creenshot of results and save it as .png file to share as a photo (see the Tools option on the menubar) as well as can change the theme of the MNK app (some works may require a light theme).</source>
-        <translation>введіть дані (іксові складові в колонку Х, ігрикові в У)(уточнювати назви та одиниці не обов&apos;язково). Також установіть значення похибок для даних (або без похибок, з фіксованими похибками(тоді потрібно ввести числа в полях нижче) або похибки незалежно для кожної точки) та натисніть &quot;АПРОКСИМУВАТИ&quot; щоб отримати результат.
-Ви можете відкрити існуючі csv файли або зберегти щойно створені (див. панель меню зліва зверху, &quot;Файл&quot;), також ви можете зробити скріншот результатів та зберегти як png щоб поділитися з іншими (див. опція &quot;Інструменти&quot;), додатково можна змінити тему програми (деякі роботи можуть вимагати світлу тему)(див. опція &quot;Вигляд&quot;).</translation>
+        <translation>введіть координати експериментальних точок (іксові складові в колонку Х, ігрекові в У)(уточнювати назви та одиниці не обов&apos;язково). Також установіть значення похибок для даних (без похибок, з фіксованими похибками (тоді потрібно ввести числа в полях нижче) або похибки для кожної точки окремо) та натисніть &quot;АПРОКСИМУВАТИ&quot; щоб отримати результат.
+Ви можете відкрити існуючі csv файли або зберегти щойно створені (див. панель меню зліва зверху, &quot;Файл&quot;), також ви можете зробити скріншот результатів та зберегти як png, щоб поділитися з іншими (див. опція &quot;Інструменти&quot;). Додатково можна змінити тему програми (деякі роботи можуть вимагати світлу тему)(див. опція &quot;Вигляд&quot;).</translation>
     </message>
     <message>
         <location filename="helpdialog.ui" line="148"/>
@@ -65,13 +65,13 @@ You can access some hints regarding errors by focusing on the &quot;?&quot; sign
 
 Example of a working program:</source>
         <translation>    Якщо у відповідь &quot;файл не вдалося відкрити&quot;:
-Будь ласка перевірте чи файл не встановлено як прихований в його властивостях у вашому файловому провіднику.
+Будь ласка, перевірте, чи файл не встановлено як прихований в його властивостях у вашому файловому менеджері.
 
 Якщо у відповідь &quot;slope дорівнює нулю. Точкові дані формують вертикальну пряму&quot;:
-Це означає, що іксові складові всіх точок однакові і такі дані вважатимуться хибними (їх обробка не є головною ціллю даної програми).
+Це означає, що іксові складові всіх точок однакові і такі дані вважаються некоректними (їх обробка не є головною ціллю даної програми).
 
 Якщо у відповідь &quot;пошкоджені дані&quot;:
-Це може означати що файл було несанкціоновано змінено (поза програмою) та доведеться або позбутися файлу або спробувати вручну дістати дані з нього якщо це ще можливо (використовуючи наприклад wordpad і порівнюючи з працюючими файлами)
+Це може означати що файл було несанкціоновано змінено (поза програмою) та доведеться або позбутися файлу, або спробувати вручну дістати дані з нього якщо це ще можливо (використовуючи, наприклад, wordpad і порівнюючи з працюючими файлами)
 Це також може означати що ви знайшли баг у програмі (якщо ви впевнені, що щось не так, будь ласка, повідомте. Контактні дані в кінці сторінки).
 
 Приклад працюючої програми:</translation>
@@ -88,13 +88,13 @@ Example of a working program:</source>
 SKV</source>
         <translation>
 
-SKV</translation>
+СКВ</translation>
     </message>
     <message>
         <location filename="helpdialog.ui" line="231"/>
-        <source>SKV is a simple data analysis program that calculates the mean and error (also provides some other output such as median, range of data, number of observations and Student&apos;s coefficient chosen by user (95% confidence interval (or 0.05 significance level) by default)).
+        <source>SKV is a simple data analysis program that calculates the mean and error (also provides some other output such as median, range of data, number of observations and Student&apos;s coefficient chosen by user (95% confidence interval or 0.05 significance level by default)).
     formula for error:</source>
-        <translation>SKV це проста програма, що рахує середнє арифметичне та середню квадратичну похибку (також передбачає визначення медіани, інтервалу спостережень, кількості спостережень та коефіцієнта Стюдента вибраного користувачем (довірчий інтервал 95% (або рівень значущості 0.05) за замовчуванням)).
+        <translation>СКВ - це проста програма, що рахує середнє арифметичне та середню квадратичну похибку (також передбачає визначення медіанного значення, інтервалу спостережень, кількості спостережень та коефіцієнта Стюдента вибраного користувачем (довірчий інтервал 95% або рівень значущості 0.05 за замовчуванням)).
     формула для похибки:</translation>
     </message>
     <message>
@@ -110,7 +110,7 @@ Data requirements: there should be only numbers, number count should not be less
     ||Note: feel free to focus your mouse tip on the &quot;𝜏&quot; to see some detail&apos;s.
  </source>
         <translation>Введіть числа (краще в стовпчик), виберіть довірчий інтервал та натисніть &quot;ОБРАХУВАТИ&quot;.
-Вимоги до даних: мають містити лише числа, кількість чисел не має бути меншою за 2.
+Вимоги до даних: вони мають містити лише числа, кількість чисел не має бути меншою за 2.
      ||Зауважте: при наведенні мишкою на &quot;𝜏&quot; відобразяться певні деталі.
  </translation>
     </message>
@@ -133,7 +133,7 @@ Please mind, if we have 35 data points for example, we use 𝜏-value as if for 
 
 </source>
         <translation>(Degrees of freedom(кількість рівнів вільності) = кількості спостережень - 1)
-Зверніть увагу, якщо ми маємо 35 спостережень використовується значення 𝜏 для 30 ступенів вільності (бо немає значення для конкретно 34 ступенів вільності)
+Зверніть увагу, якщо ми маємо 35 спостережень, використовується значення 𝜏 для 30 ступенів вільності (бо немає значення для конкретно 34 ступенів вільності)
 
 
 
@@ -142,7 +142,7 @@ Please mind, if we have 35 data points for example, we use 𝜏-value as if for 
     <message>
         <location filename="helpdialog.ui" line="325"/>
         <source>Find latest releases of MNK app on &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;this github page&lt;/a&gt;.</source>
-        <translation>Знаходьте найновіші релізи MNK за &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;посиланням на гітхаб&lt;/a&gt;.</translation>
+        <translation>Знаходьте найновіші релізи MНK за &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;посиланням на гітхаб&lt;/a&gt;.</translation>
     </message>
     <message>
         <location filename="helpdialog.ui" line="340"/>
@@ -178,12 +178,12 @@ end of page</source>
     <message>
         <location filename="mainwindow.ui" line="73"/>
         <source>MNK</source>
-        <translation>MNK</translation>
+        <translation>МНК</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="98"/>
         <source>SKV</source>
-        <translation>SKV</translation>
+        <translation>СКВ</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="123"/>
@@ -196,16 +196,20 @@ end of page</source>
         <translation>ВИЙТИ</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="80"/>
-        <location filename="mainwindow.cpp" line="86"/>
+        <source>welcome</source>
+        <translation type="vanished">вітаємо</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="81"/>
+        <location filename="mainwindow.cpp" line="88"/>
         <source>ERROR</source>
         <translation>ПОМИЛКА</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="80"/>
-        <location filename="mainwindow.cpp" line="86"/>
+        <location filename="mainwindow.cpp" line="81"/>
+        <location filename="mainwindow.cpp" line="88"/>
         <source>error translating.</source>
-        <translation>помилка перекладання.</translation>
+        <translation>помилка перекладу.</translation>
     </message>
 </context>
 <context>
@@ -213,12 +217,12 @@ end of page</source>
     <message>
         <location filename="mnkwindow.ui" line="20"/>
         <source>MNK</source>
-        <translation>MNK</translation>
+        <translation>MНK</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="39"/>
         <source>Find latest releases of MNK app on &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;this github page&lt;/a&gt;.</source>
-        <translation>Знаходьте найновіші релізи MNK за &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;посиланням на гітхаб&lt;/a&gt;.</translation>
+        <translation>Знаходьте найновіші релізи MНK за &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;посиланням на гітхаб&lt;/a&gt;.</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="90"/>
@@ -238,13 +242,13 @@ end of page</source>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="232"/>
-        <source>x errs</source>
-        <translation>похибки Х</translation>
+        <source>X errs</source>
+        <translation>похибки X</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="251"/>
-        <source>all x errs</source>
-        <translation>всі індивідуальні похибки</translation>
+        <source>all X errs</source>
+        <translation>окремі похибки для кожного X</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="270"/>
@@ -256,35 +260,35 @@ end of page</source>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="292"/>
-        <source>no x errs</source>
-        <translation>немає похибок</translation>
+        <source>no X errs</source>
+        <translation>похибки X відсутні</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="333"/>
         <location filename="mnkwindow.ui" line="466"/>
         <source>fixed relative errs</source>
-        <translation>фіксовані відносні похибки</translation>
+        <translation>фіксована відносна похибка</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="383"/>
         <location filename="mnkwindow.ui" line="493"/>
         <source>fixed absolute errs</source>
-        <translation>фіксовані абсолютні похибки</translation>
+        <translation>фіксована абсолютна похибка</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="431"/>
-        <source>y errs</source>
+        <source>Y errs</source>
         <translation>похибки Y</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="442"/>
-        <source>all y errs</source>
-        <translation>всі індивідуальні похибки</translation>
+        <source>all Y errs</source>
+        <translation>окремі похибки для кожного Y</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="454"/>
-        <source>no y errs</source>
-        <translation>немає похибок</translation>
+        <source>no Y errs</source>
+        <translation>похибки Y відсутні</translation>
     </message>
     <message>
         <location filename="mnkwindow.ui" line="534"/>
@@ -349,34 +353,34 @@ Slope =   __________</translation>
         <translation>Темна тема</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="35"/>
+        <location filename="mnkwindow.cpp" line="36"/>
         <source>FIT</source>
         <translation>АПРОКСИМУВАТИ</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="36"/>
+        <location filename="mnkwindow.cpp" line="37"/>
         <source>EXIT</source>
         <translation>ВИЙТИ</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="139"/>
+        <location filename="mnkwindow.cpp" line="140"/>
         <source>HINT: such an error is proper for times when you get errors for each point on the table individually (by using SKV for example), and so they may unexpectedly differ among themselves</source>
-        <translation>Підказка: така похибка підходить для дослідів, де похибки для кожної точки у таблиці дістаються індивідуально (наприклад використовуючи SKV), вони можуть несподівано різнитися між собою</translation>
+        <translation>Підказка: така похибка підходить для дослідів, де похибки для кожної точки у таблиці дістаються індивідуально (наприклад використовуючи SKV), вони можуть відрізнятись для різних точок</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="148"/>
+        <location filename="mnkwindow.cpp" line="149"/>
         <source>HINT: such an error is proper when specifying and error for X has no sense, for example the number of guitar strings, you cannot say that we&apos;ve got 4 ± 0.0013 strings</source>
-        <translation>Підказка: така похибка підходить для моментів, коли вказування похибки для величини не має сенсу, наприклад тут кількість струн гітари, ми не можемо сказати, що маємо 4 ± 0.0013 струни</translation>
+        <translation>Підказка: нульова похибка підходить для ситуацій, коли похибки для величини не має сенсу, наприклад ми не можемо сказати, що кількість струн гітари дорівнює 4 ± 0.0013 струни</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="157"/>
-        <source>HINT: such an error is proper when using instrument with an additive scale, if you have needle ammeter, voltmeter or other instrument, please input a value that is equial to accuracy class of the instrument times its maximum value on the scale divided by 100</source>
-        <translation>Підказка: така похибка властива приладам з аддитивною шкалою, якщо у вас стрілковий амперметр, вольтметр чи інший прилад, введіть сюди значення, яке дорівнює класу точності прилада, помноженному на його максимальне значення на шкалі, і поділене на 100</translation>
+        <location filename="mnkwindow.cpp" line="158"/>
+        <source>HINT: such an error is proper when using instrument with an additive scale; if you have needle ammeter, voltmeter or other instrument, please input a value that is equial to accuracy class of the instrument times its maximum value on the scale divided by 100</source>
+        <translation>Підказка: така похибка властива приладам з аддитивною шкалою; якщо у вас стрілковий амперметр, вольтметр чи інший прилад, введіть сюди значення, яке дорівнює класу точності прилада, помножене на максимальне значення на його шкалі і поділене на 100</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="166"/>
+        <location filename="mnkwindow.cpp" line="167"/>
         <source>HINT: such an error is proper when using instrument with multiplicative scale. Relative error of X is absolute error for X divided by X. Please input a number in range from 0 to 1, where 1 means 100% relative error</source>
-        <translation>Підказка: така похибка властива приладам з мультиплікативною шкалою,відносна похибка Х це його абсолютна похибка поділена на його значення. Будь ласка введіть число в діапазоні 0 - 1, де 1 означає 100% відносну похибку</translation>
+        <translation>Підказка: така похибка властива приладам з мультиплікативною шкалою. Відносна похибка Х це його абсолютна похибка поділена на його значення. Будь ласка введіть число в діапазоні 0 - 1, де 1 означає 100% відносну похибку</translation>
     </message>
     <message>
         <location filename="mnkwindow.cpp" line="226"/>
@@ -384,192 +388,205 @@ Slope =   __________</translation>
         <translation>не вказано фіксованої похибки для Х</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="234"/>
-        <location filename="mnkwindow.cpp" line="245"/>
+        <location filename="mnkwindow.cpp" line="232"/>
         <source>fixed X error is a negative number</source>
         <translation>фіксована похибка для Х - негативне число</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="239"/>
+        <location filename="mnkwindow.cpp" line="237"/>
         <source>no fixed relative X error specified</source>
         <translation>не вказано відносної похибки для Х</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="247"/>
         <source>relative X error cannot be bigger than 1 (bigger than 100%)</source>
-        <translation>відносна похибка Х не може бути більшою за 1 (більшою за 100%)</translation>
+        <translation type="vanished">відносна похибка Х не може бути більшою за 1 (більшою за 100%)</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="260"/>
+        <location filename="mnkwindow.cpp" line="256"/>
         <source>no fixed Y error specified</source>
         <translation>не вказано фіксованої похибки для Y</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="268"/>
-        <location filename="mnkwindow.cpp" line="279"/>
+        <location filename="mnkwindow.cpp" line="262"/>
         <source>fixed Y error is a negative number</source>
         <translation>фіксована похибка для Y - негативне число</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="273"/>
+        <location filename="mnkwindow.cpp" line="267"/>
         <source>no fixed relative Y error specified</source>
         <translation>не вказано відносної похибки для Y</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="281"/>
         <source>relative Y error cannot be bigger than 1 (bigger than 100%)</source>
-        <translation>відносна похибка Y не може бути більшою за 1 (більшою за 100%)</translation>
+        <translation type="vanished">відносна похибка Y не може бути більшою за 1 (більшою за 100%)</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="308"/>
+        <location filename="mnkwindow.cpp" line="241"/>
+        <source>fixed relative X error is a negative number</source>
+        <translation>фіксована відносна похибка для Х - негативне число</translation>
+    </message>
+    <message>
+        <location filename="mnkwindow.cpp" line="243"/>
+        <source>relative X error is bigger than 1 (bigger than 100%). Such an error will not be considered correct</source>
+        <translation>відносна похибка Х більша за 1 (більшою за 100%). Така похибка не вважатиметься коректною</translation>
+    </message>
+    <message>
+        <location filename="mnkwindow.cpp" line="271"/>
+        <source>fixed relative Y error is a negative number</source>
+        <translation>фіксована відносна похибка для Y- негативне число</translation>
+    </message>
+    <message>
+        <location filename="mnkwindow.cpp" line="273"/>
+        <source>relative Y error is bigger than 1 (bigger than 100%). Such an error will not be considered correct</source>
+        <translation>відносна похибка Y більша за 1 (більшою за 100%). Така похибка не вважатиметься коректною</translation>
+    </message>
+    <message>
+        <location filename="mnkwindow.cpp" line="300"/>
         <source>no X specified on row #</source>
         <translation>не вказано значення для Х в рядку №</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="312"/>
+        <location filename="mnkwindow.cpp" line="304"/>
         <source>no Y specified on row #</source>
         <translation>не вказано значення для Y в рядку №</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="316"/>
+        <location filename="mnkwindow.cpp" line="308"/>
         <source>no X error found on row #</source>
         <translation>не вказано похибки для Х в рядку №</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="325"/>
+        <location filename="mnkwindow.cpp" line="315"/>
         <source>no Y error found on row #</source>
         <translation>не вказано похибки для Y в рядку №</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="352"/>
-        <location filename="mnkwindow.cpp" line="422"/>
-        <location filename="mnkwindow.cpp" line="649"/>
+        <location filename="mnkwindow.cpp" line="336"/>
+        <location filename="mnkwindow.cpp" line="406"/>
+        <location filename="mnkwindow.cpp" line="633"/>
         <source>Unsaved modifications</source>
         <translation>Незбережені зміни</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="352"/>
-        <location filename="mnkwindow.cpp" line="422"/>
-        <location filename="mnkwindow.cpp" line="649"/>
+        <location filename="mnkwindow.cpp" line="336"/>
+        <location filename="mnkwindow.cpp" line="406"/>
+        <location filename="mnkwindow.cpp" line="633"/>
         <source>do you want to save changes?</source>
         <translation>Зберегти зміни?</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="403"/>
-        <location filename="mnkwindow.cpp" line="682"/>
-        <location filename="mnkwindow.cpp" line="704"/>
+        <location filename="mnkwindow.cpp" line="387"/>
+        <location filename="mnkwindow.cpp" line="666"/>
+        <location filename="mnkwindow.cpp" line="688"/>
         <source>Save File</source>
         <translation>Зберегти файл</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="403"/>
+        <location filename="mnkwindow.cpp" line="387"/>
         <source>CSV files (*.csv)</source>
         <translation>CSV файли (*.csv)</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="409"/>
-        <location filename="mnkwindow.cpp" line="435"/>
-        <location filename="mnkwindow.cpp" line="441"/>
-        <location filename="mnkwindow.cpp" line="454"/>
-        <location filename="mnkwindow.cpp" line="475"/>
-        <location filename="mnkwindow.cpp" line="498"/>
-        <location filename="mnkwindow.cpp" line="532"/>
-        <location filename="mnkwindow.cpp" line="557"/>
-        <location filename="mnkwindow.cpp" line="579"/>
-        <location filename="mnkwindow.cpp" line="591"/>
-        <location filename="mnkwindow.cpp" line="602"/>
-        <location filename="mnkwindow.cpp" line="688"/>
-        <location filename="mnkwindow.cpp" line="710"/>
-        <location filename="mnkwindow.cpp" line="773"/>
-        <location filename="mnkwindow.cpp" line="1076"/>
-        <location filename="mnkwindow.cpp" line="1082"/>
-        <location filename="mnkwindow.cpp" line="1084"/>
+        <location filename="mnkwindow.cpp" line="393"/>
+        <location filename="mnkwindow.cpp" line="419"/>
+        <location filename="mnkwindow.cpp" line="425"/>
+        <location filename="mnkwindow.cpp" line="438"/>
+        <location filename="mnkwindow.cpp" line="459"/>
+        <location filename="mnkwindow.cpp" line="482"/>
+        <location filename="mnkwindow.cpp" line="516"/>
+        <location filename="mnkwindow.cpp" line="541"/>
+        <location filename="mnkwindow.cpp" line="563"/>
+        <location filename="mnkwindow.cpp" line="575"/>
+        <location filename="mnkwindow.cpp" line="586"/>
+        <location filename="mnkwindow.cpp" line="672"/>
+        <location filename="mnkwindow.cpp" line="694"/>
+        <location filename="mnkwindow.cpp" line="757"/>
+        <location filename="mnkwindow.cpp" line="1061"/>
         <source>ERROR</source>
         <translation>ПОМИЛКА</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="409"/>
-        <location filename="mnkwindow.cpp" line="435"/>
+        <location filename="mnkwindow.cpp" line="393"/>
+        <location filename="mnkwindow.cpp" line="419"/>
         <source>chosen file is not a .csv file.</source>
         <translation>обраний файл не є файлом .csv.</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="428"/>
+        <location filename="mnkwindow.cpp" line="412"/>
         <source>Choose File</source>
         <translation>Виберіть файл</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="441"/>
+        <location filename="mnkwindow.cpp" line="425"/>
         <source>error openning the file.</source>
         <translation>помилка відкриття файлу.</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="454"/>
+        <location filename="mnkwindow.cpp" line="438"/>
         <source>file is empty.</source>
         <translation>файл пустий.</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="475"/>
-        <location filename="mnkwindow.cpp" line="498"/>
-        <location filename="mnkwindow.cpp" line="532"/>
-        <location filename="mnkwindow.cpp" line="557"/>
-        <location filename="mnkwindow.cpp" line="579"/>
-        <location filename="mnkwindow.cpp" line="591"/>
-        <location filename="mnkwindow.cpp" line="602"/>
+        <location filename="mnkwindow.cpp" line="459"/>
+        <location filename="mnkwindow.cpp" line="482"/>
+        <location filename="mnkwindow.cpp" line="516"/>
+        <location filename="mnkwindow.cpp" line="541"/>
+        <location filename="mnkwindow.cpp" line="563"/>
+        <location filename="mnkwindow.cpp" line="575"/>
+        <location filename="mnkwindow.cpp" line="586"/>
         <source>corrupted data in a .csv file.</source>
         <translation>пошкоджені дані в .csv файлі.</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="682"/>
-        <location filename="mnkwindow.cpp" line="704"/>
+        <location filename="mnkwindow.cpp" line="666"/>
+        <location filename="mnkwindow.cpp" line="688"/>
         <source>PNG files (*.png)</source>
         <translation>PNG файли (*.png)</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="688"/>
-        <location filename="mnkwindow.cpp" line="710"/>
+        <location filename="mnkwindow.cpp" line="672"/>
+        <location filename="mnkwindow.cpp" line="694"/>
         <source>chosen file is not a .png file.</source>
         <translation>обраний файл не є .png файлом.</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="700"/>
+        <location filename="mnkwindow.cpp" line="684"/>
         <source>nothing to save</source>
         <translation>Нічого зберігати</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="700"/>
+        <location filename="mnkwindow.cpp" line="684"/>
         <source>press &quot;FIT&quot; to get a chart.</source>
         <translation>натисніть &quot;АПРОКСИМУВАТИ&quot; шоб отримати графік.</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="734"/>
+        <location filename="mnkwindow.cpp" line="718"/>
         <source>Names</source>
         <translation>Назва</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="737"/>
+        <location filename="mnkwindow.cpp" line="721"/>
         <source>Units</source>
         <translation>Одиниці</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="773"/>
+        <location filename="mnkwindow.cpp" line="757"/>
         <source>error saving the file.</source>
         <translation>Помилка збереження файлу.</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="838"/>
+        <location filename="mnkwindow.cpp" line="822"/>
         <source>Saved</source>
         <translation>Збережено</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="1051"/>
+        <location filename="mnkwindow.cpp" line="1035"/>
         <source>Modified</source>
         <translation>Змінено</translation>
     </message>
     <message>
-        <location filename="mnkwindow.cpp" line="1082"/>
         <source>error reading number</source>
-        <translation>помилка читання числа</translation>
+        <translation type="vanished">помилка читання числа</translation>
     </message>
 </context>
 <context>
@@ -584,13 +601,19 @@ Slope =   __________</translation>
         <source>slope is equal to zero. Data points form a vertical line.</source>
         <translation>slope дорівнює нулю. Точкові дані формують вертикальну пряму.</translation>
     </message>
+    <message>
+        <location filename="helpingFunctions.cpp" line="15"/>
+        <location filename="helpingFunctions.cpp" line="23"/>
+        <source>error reading number: </source>
+        <translation>помилка читання числа: </translation>
+    </message>
 </context>
 <context>
     <name>SkvWindow</name>
     <message>
         <location filename="skvwindow.ui" line="20"/>
         <source>SKV</source>
-        <translation>SKV</translation>
+        <translation>СКВ</translation>
     </message>
     <message>
         <location filename="skvwindow.ui" line="49"/>
@@ -652,26 +675,25 @@ Slope =   __________</translation>
     <message>
         <location filename="skvwindow.ui" line="330"/>
         <source>Find latest releases of MNK app on &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;this github page&lt;/a&gt;.</source>
-        <translation>Знаходьте найновіші релізи MNK за &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;посиланням на гітхаб&lt;/a&gt;.</translation>
+        <translation>Знаходьте найновіші релізи MНK за &lt;a href=&quot;https://github.com/Andriy-Bilenko/MNK-Least-Squares-Method-&quot;&gt;посиланням на гітхаб&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="skvwindow.cpp" line="43"/>
+        <location filename="skvwindow.cpp" line="45"/>
         <source>[Student&apos;s coefficient / t-value]&lt;br/&gt;It is recommended to visit &lt;a href=&quot;https://www.scribbr.com/statistics/students-t-table/&quot;&gt;the guide&lt;/a&gt;&lt;br/&gt;For more see HELP pane or optionally visit &lt;a href=&quot;https://en.wikipedia.org/wiki/Student%27s_t-distribution&quot;&gt;Wikipedia&lt;/a&gt;</source>
         <translation>[коеф. Стюдента / т-значення]&lt;br/&gt;Рекомендується відвідати &lt;a href=&quot;https://www.scribbr.com/statistics/students-t-table/&quot;&gt;цей гайд&lt;/a&gt;&lt;br/&gt;Більше інформації у розділі ДОПОМОГА, також можете перейти за посиланням на &lt;a href=&quot;https://en.wikipedia.org/wiki/Student%27s_t-distribution&quot;&gt;Вікіпедію&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="skvwindow.cpp" line="154"/>
         <source>error reading floating point numbers from the box, please make sure input data is clean.</source>
-        <translation>виявлено проблему зчитування числа, будь ласка перевірте ваші дані.</translation>
+        <translation type="vanished">виявлено проблему зчитування числа, будь ласка перевірте ваші дані.</translation>
     </message>
     <message>
-        <location filename="skvwindow.cpp" line="155"/>
-        <location filename="skvwindow.cpp" line="172"/>
+        <location filename="skvwindow.cpp" line="158"/>
+        <location filename="skvwindow.cpp" line="175"/>
         <source>ERROR</source>
         <translation>ПОМИЛКА</translation>
     </message>
     <message>
-        <location filename="skvwindow.cpp" line="171"/>
+        <location filename="skvwindow.cpp" line="174"/>
         <source>there should be at least 2 input points.
 (nothing will be calculated)</source>
         <translation>має бути хоча б 2 спостереження</translation>
