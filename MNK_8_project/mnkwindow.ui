@@ -229,7 +229,7 @@
                 </font>
                </property>
                <property name="title">
-                <string>x errs</string>
+                <string>X errs</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_6">
                 <item>
@@ -248,7 +248,7 @@
                      </font>
                     </property>
                     <property name="text">
-                     <string>all x errs</string>
+                     <string>all X errs</string>
                     </property>
                    </widget>
                   </item>
@@ -289,7 +289,7 @@
                      </font>
                     </property>
                     <property name="text">
-                     <string>no x errs</string>
+                     <string>no X errs</string>
                     </property>
                    </widget>
                   </item>
@@ -428,7 +428,7 @@
                 </font>
                </property>
                <property name="title">
-                <string>y errs</string>
+                <string>Y errs</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_5">
                 <item>
@@ -439,7 +439,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>all y errs</string>
+                   <string>all Y errs</string>
                   </property>
                  </widget>
                 </item>
@@ -451,7 +451,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>no y errs</string>
+                   <string>no Y errs</string>
                   </property>
                  </widget>
                 </item>

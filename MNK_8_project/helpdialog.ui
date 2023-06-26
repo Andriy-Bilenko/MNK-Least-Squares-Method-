@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>-185</y>
+      <y>-846</y>
       <width>3403</width>
       <height>1763</height>
      </rect>
@@ -104,7 +104,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Works using Least Squares Method (that's where its title came from).</string>
+        <string>Works using Least Squares Method (MNK in Ukrainian, that's where its title came from).</string>
        </property>
       </widget>
      </item>
@@ -228,7 +228,7 @@ SKV</string>
         </font>
        </property>
        <property name="text">
-        <string>SKV is a simple data analysis program that calculates the mean and error (also provides some other output such as median, range of data, number of observations and Student's coefficient chosen by user (95% confidence interval (or 0.05 significance level) by default)).
+        <string>SKV is a simple data analysis program that calculates the mean and error (also provides some other output such as median, range of data, number of observations and Student's coefficient chosen by user (95% confidence interval or 0.05 significance level by default)).
     formula for error:</string>
        </property>
       </widget>

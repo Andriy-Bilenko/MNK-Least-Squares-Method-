@@ -22,6 +22,7 @@
 #include <QRadioButton>
 #include <algorithm>
 #include <QtMath>
+#include "helpingFunctions.hpp"
 #include <QTranslator>
 
 
@@ -154,7 +155,7 @@ bool MnkWindow::eventFilter(QObject *obj, QEvent *ev)
     }
     if ((ev->type() == QEvent::HoverEnter) && (obj == ui->labelFixedXErrsHint))
     {
-        ui->tipsLabelForMNK->setText(tr("HINT: such an error is proper when using instrument with an additive scale, if you have needle ammeter, voltmeter or other instrument, please input a value that is equial to accuracy class of the instrument times its maximum value on the scale divided by 100"));
+        ui->tipsLabelForMNK->setText(tr("HINT: such an error is proper when using instrument with an additive scale; if you have needle ammeter, voltmeter or other instrument, please input a value that is equial to accuracy class of the instrument times its maximum value on the scale divided by 100"));
         ui->tipWidget->setGeometry((ui->labelFixedXErrsHint->x() + ui->groupBoxXErrs->x()),
                                    (ui->labelFixedXErrsHint->y() + ui->groupBoxXErrs->y() - ui->tipWidget->height()),
                                    ui->tipWidget->width(),ui->tipWidget->height());
@@ -215,7 +216,6 @@ void MnkWindow::readData(QVector<QString> &varNames, QVector<QString> &varUnits,
         varUnits.push_back(", " + ItemY->text());
     }
     //finding errors(deviations):
-    std::string::size_type sz;//for std::stold
     int deltaXColumnNumber{-1};//-1 means column is not found yet
     int deltaYColumnNumber{-1};
     long double fixedRelativeXErr{-1};//-1 means not set yet
@@ -225,9 +225,7 @@ void MnkWindow::readData(QVector<QString> &varNames, QVector<QString> &varUnits,
         if(ui->lineEditXFixedErr->text() == ""){
             throw InvalidDeviations(tr("no fixed X error specified"));
         }else{
-            std::string fixedXErrString = ui->lineEditXFixedErr->text().toStdString();
-            std::replace(fixedXErrString.begin(), fixedXErrString.end(), ',', '.');//replacing commas with dots if such available
-            fixedXErr = std::stold(fixedXErrString,&sz);//std::stold will throw if data is non-numeric
+            fixedXErr = getNumberFromQString(ui->lineEditXFixedErr->text());
             if(fixedXErr >= 0){
                 vecXErrs.push_back(fixedXErr);
             }else{
@@ -238,13 +236,11 @@ void MnkWindow::readData(QVector<QString> &varNames, QVector<QString> &varUnits,
         if(ui->lineEditXFixedRelativeErr->text() == ""){
             throw InvalidDeviations(tr("no fixed relative X error specified"));
         }else{
-            std::string fixedXErrString = ui->lineEditXFixedRelativeErr->text().toStdString();
-            std::replace(fixedXErrString.begin(), fixedXErrString.end(), ',', '.');//replacing commas with dots if such available
-            fixedRelativeXErr = std::stold(fixedXErrString,&sz);//std::stold will throw if data is non-numeric
+            fixedRelativeXErr = getNumberFromQString(ui->lineEditXFixedRelativeErr->text());
             if(fixedRelativeXErr < 0){
-                throw InvalidDeviations(tr("fixed X error is a negative number"));
+                throw InvalidDeviations(tr("fixed relative X error is a negative number"));
             }else if(fixedRelativeXErr > 1){
-                throw InvalidDeviations(tr("relative X error cannot be bigger than 1 (bigger than 100%)"));
+                throw InvalidDeviations(tr("relative X error is bigger than 1 (bigger than 100%). Such an error will not be considered correct"));
             }
         }
     }else if(ui->radioButtonAllXErrs->isChecked()){
@@ -259,9 +255,7 @@ void MnkWindow::readData(QVector<QString> &varNames, QVector<QString> &varUnits,
         if(ui->lineEditYFixedErr->text() == ""){
             throw InvalidDeviations(tr("no fixed Y error specified"));
         }else{
-            std::string fixedYErrString = ui->lineEditYFixedErr->text().toStdString();
-            std::replace(fixedYErrString.begin(), fixedYErrString.end(), ',', '.');//replacing commas with dots if such available
-            fixedYErr = std::stold(fixedYErrString,&sz);//std::stold will throw if data is non-numeric
+            fixedYErr = getNumberFromQString(ui->lineEditYFixedErr->text());
             if(fixedYErr >= 0){
                 vecYErrs.push_back(fixedYErr);
             }else{
@@ -272,13 +266,11 @@ void MnkWindow::readData(QVector<QString> &varNames, QVector<QString> &varUnits,
         if(ui->lineEditYFixedRelativeErr->text() == ""){
             throw InvalidDeviations(tr("no fixed relative Y error specified"));
         }else{
-            std::string fixedYErrString = ui->lineEditYFixedRelativeErr->text().toStdString();
-            std::replace(fixedYErrString.begin(), fixedYErrString.end(), ',', '.');//replacing commas with dots if such available
-            fixedRelativeYErr = std::stold(fixedYErrString,&sz);//std::stold will throw if data is non-numeric
+            fixedRelativeYErr = getNumberFromQString(ui->lineEditYFixedRelativeErr->text());
             if(fixedRelativeYErr < 0){
-                throw InvalidDeviations(tr("fixed Y error is a negative number"));
+                throw InvalidDeviations(tr("fixed relative Y error is a negative number"));
             }else if(fixedRelativeYErr > 1){
-                throw InvalidDeviations(tr("relative Y error cannot be bigger than 1 (bigger than 100%)"));
+                throw InvalidDeviations(tr("relative Y error is bigger than 1 (bigger than 100%). Such an error will not be considered correct"));
             }
         }
     }else if(ui->radioButtonAllYErrs->isChecked()){
@@ -315,26 +307,18 @@ void MnkWindow::readData(QVector<QString> &varNames, QVector<QString> &varUnits,
                     if(ItemXErr->text().toStdString().find_first_not_of(' ') == std::string::npos){//there are only spaces(or nothing at all)
                         throw InvalidDeviations(tr("no X error found on row #") + QString::number(i-1));
                     }else{
-                        std::string itemXErrTextString = ItemXErr->text().toStdString();
-                        std::replace(itemXErrTextString.begin(), itemXErrTextString.end(), ',', '.');//replacing commas with dots if such available
-                        vecXErrs.push_back(std::stold (itemXErrTextString,&sz));
+                        vecXErrs.push_back(getNumberFromQString(ItemXErr->text()));
                     }
                 }
                 if(deltaYColumnNumber != -1){
                     if(ItemYErr->text().toStdString().find_first_not_of(' ') == std::string::npos){//there are only spaces(or nothing at all)
                         throw InvalidDeviations(tr("no Y error found on row #") + QString::number(i-1));
                     }else{
-                        std::string itemYErrTextString = ItemYErr->text().toStdString();
-                        std::replace(itemYErrTextString.begin(), itemYErrTextString.end(), ',', '.');//replacing commas with dots if such available
-                        vecYErrs.push_back(std::stold (itemYErrTextString,&sz));
+                        vecYErrs.push_back(getNumberFromQString(ItemYErr->text()));
                     }
                 }
-                std::string itemXTextString = ItemX->text().toStdString();
-                std::replace(itemXTextString.begin(), itemXTextString.end(), ',', '.');//replacing commas with dots if such available
-                std::string itemYTextString = ItemY->text().toStdString();
-                std::replace(itemYTextString.begin(), itemYTextString.end(), ',', '.');//replacing commas with dots if such available
-                vecX.push_back(std::stold (itemXTextString,&sz));
-                vecY.push_back(std::stold (itemYTextString,&sz));
+                vecX.push_back(getNumberFromQString(ItemX->text()));
+                vecY.push_back(getNumberFromQString(ItemY->text()));
                 if(fixedRelativeXErr != -1){
                     vecXErrs.push_back(vecX.last() * fixedRelativeXErr);
                 }
@@ -1072,17 +1056,9 @@ int MnkWindow::fitButtonClicked()
     try{
         readData(varNames, varUnits, xLongVec, yLongVec, xLongVecErrs, yLongVecErrs);
         computate_equation(xLongVec, yLongVec, slope, intercept);
-    }catch(const ComputationWarning& ex){
-        QMessageBox::critical(this, tr("ERROR"), tr(ex.what()));
-        return -1;
     }
     catch(const std::exception& ex){
-        std::string exWhat = ex.what();
-        if (exWhat == "stold"){
-            QMessageBox::critical(this, tr("ERROR"), tr("error reading number"));
-        }else{
-            QMessageBox::critical(this, tr("ERROR"), tr(ex.what()));
-        }
+        QMessageBox::critical(this, tr("ERROR"), tr(ex.what()));
         return -1;//end of function execution
     }
     //computating errors:
